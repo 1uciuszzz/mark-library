@@ -1,0 +1,82 @@
+@font-face {
+  font-family: zpix;
+  src: url(./font/zpix.ttf);
+}
+
+@font-face {
+  font-family: PressStart2P-Regular;
+  src: url(./font/PressStart2P-Regular.ttf);
+}
+
+html,
+body,
+pre,
+code,
+kbd,
+samp {
+  font-family: PressStart2P-Regular, zpix;
+}
+
+#navbar {
+  margin-top: 10px;
+}
+
+.myLink {
+  margin-right: 20px;
+}
+
+#body {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+#body > div {
+  padding: 0;
+}
+
+._listGroup {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+._listGroupItem {
+  margin-bottom: 10px;
+}
+
+#listGroupCol {
+  margin-right: 5px;
+}
+
+#_markTable {
+  padding: 20px;
+}
+
+#_markTableList {
+  margin: 10px;
+}
+
+#markTableCol {
+  margin-left: 5px;
+}
+
+#_markCard {
+  margin: 0;
+  padding: 16px;
+}
+
+#_inCard {
+  border: none;
+}
+
+.card-body {
+  padding: 0;
+}
+
+#aboutContainer {
+  margin-top: 10px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
