@@ -17,11 +17,11 @@ parser = reqparse.RequestParser()
 parser.add_argument('')
 
 # 创建连接参数
-USERNAME = 'RLibrary'
-PASSWORD = 'RLibrary428'
-HOST = '42.193.189.251'
-PORT = '3306'
-DATABASE = 'RLibrary'
+USERNAME = ''
+PASSWORD = ''
+HOST = ''
+PORT = ''
+DATABASE = ''
 DbUrl = "mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8".format(
     USERNAME, PASSWORD, HOST, PORT, DATABASE)
 
