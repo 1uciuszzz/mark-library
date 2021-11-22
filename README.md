@@ -1,55 +1,162 @@
-# 作品介绍文档
+<h1 align="center">
+  <a href="https://github.com/n1ckzhao/mark-library">
+    <!-- Please provide path to your logo here -->
+    <img src="docs/images/logo192.png" alt="Logo" width="100" height="100">
+  </a>
+</h1>
 
-![home](./主页.png)
-![home](./分类查询.png)
-![home](./关于.png)
+<div align="center">
+  Mark-Library
+  <br />
+  <a href="#about"><strong>Explore the screenshots »</strong></a>
+  <br />
+  <br />
+  <a href="https://github.com/n1ckzhao/mark-library/issues/new?assignees=&labels=bug&template=01_BUG_REPORT.md&title=bug%3A+">Report a Bug</a>
+  ·
+  <a href="https://github.com/n1ckzhao/mark-library/issues/new?assignees=&labels=enhancement&template=02_FEATURE_REQUEST.md&title=feat%3A+">Request a Feature</a>
+  .
+  <a href="https://github.com/n1ckzhao/mark-library/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">Ask a Question</a>
+</div>
 
-## 作品开发平台
+<div align="center">
+<br />
 
-- 操作系统:Windows10
-- 前端:[
-  - IDE:`Visual Studio Code`
-  - js 框架:`React`
-  - css 框架:`nes-css`
-  - 网络库:`axios`
-  - 测试工具:`postman`
-    ]
-- 后端:[
-  - `Python 3.7`
-  - 库:
-  - `Flask`
-  - `flask-restful`
-  - `flask-sqlalchemy`
-  - `flask-cor`
-  - IDE:`Visual Studio Code`
-  - 测试工具:`postman`
-    ]
-- 数据库:`MySQL 8.0`
-- 数据可视化工具:`MySQL Workbench`
+[![Project license](https://img.shields.io/github/license/n1ckzhao/mark-library.svg?style=flat-square)](LICENSE)
 
-## 主要软件
+[![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/n1ckzhao/mark-library/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+[![code with love by n1ckzhao](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-n1ckzhao-ff1414.svg?style=flat-square)](https://github.com/n1ckzhao)
 
-- JavaScript
-- Python
-- React
-- Flask
-- Visual Studio Code
+</div>
 
-## 操作方法
+<details open="open">
+<summary>Table of Contents</summary>
 
-启动:
+- [About](#about)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+- [Project assistance](#project-assistance)
+- [Contributing](#contributing)
+- [Authors & contributors](#authors--contributors)
+- [Security](#security)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-1. 进入后端项目文件夹
-2. `pipenv install`
-3. `pipenv run app`
-4. 进入前端项目文件夹
-5. `npm install`
-6. `npm start`
-7. 打开浏览器访问 http://localhost:3000
+</details>
 
-## 作品亮点与特色
+---
 
-这是一个"产品/设计师/独立开发者的资源库"  
-其中收集了大量的网站,包括学习资源/背景素材/插画素材/截图美化...等等分类的资源站点,为的是产品/设计师/独立开发者们在创造/开发/设计自己作品的过程中能够轻松获取灵感/素材.  
-在技术方面,使用了前沿技术 React 作为前端界面的渲染.  
-数据库中的数据来源于长期的收集/积累.
+## About
+
+> This is a creative competition entries for [caai](http://mit.caai.cn/).
+
+Have a imagine! When you go out and your pc is not with. So you find a public computer, but you want access your saved marks and you do not want to login.
+
+This is a mark library can render your own marks list on browser.
+
+<details>
+<summary>Screenshots</summary>
+<br>
+
+> **[?]**
+> Please provide your screenshots here.
+
+|                            Home Page                             |                            About Page                             |
+| :--------------------------------------------------------------: | :---------------------------------------------------------------: |
+| <img src="docs/images/index.png" title="Home Page" width="100%"> | <img src="docs/images/about.png" title="Login Page" width="100%"> |
+
+</details>
+
+### Built With
+
+- [React](https://github.com/facebook/react)
+- [Flask](https://github.com/pallets/flask)
+- [Axios](https://github.com/axios/axios)
+- [MySQL](https://github.com/mysqljs/mysql)
+- [NES.CSS](https://github.com/nostalgic-css/NES.css)
+- [Bootstrap](https://github.com/twbs/bootstrap)
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have installed `node.js`, `python 3.7` and `pipenv`.
+
+### Installation
+
+1. Download the project.
+2. Use npm to install required package.
+
+```sh
+npm install
+```
+
+3. Use pipenv to install back-end enviroment.
+
+```sh
+pipenv install
+```
+
+## Usage
+
+1. Run command in folder back-end:
+
+```sh
+pipenv run app.py
+```
+
+> Dont forget ckeck the database properties and make sure it is correct in file `app.py`. 2. Run command in folder front-end:
+
+```sh
+npm start
+```
+
+## Roadmap
+
+See the [open issues](https://github.com/n1ckzhao/mark-library/issues) for a list of proposed features (and known issues).
+
+- [Top Feature Requests](https://github.com/n1ckzhao/mark-library/issues?q=label%3Aenhancement+is%3Aopen+sort%3Areactions-%2B1-desc) (Add your votes using the 👍 reaction)
+- [Top Bugs](https://github.com/n1ckzhao/mark-library/issues?q=is%3Aissue+is%3Aopen+label%3Abug+sort%3Areactions-%2B1-desc) (Add your votes using the 👍 reaction)
+- [Newest Bugs](https://github.com/n1ckzhao/mark-library/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+
+## Project assistance
+
+If you want to say **thank you** or/and support active development of mark-library:
+
+- Add a [GitHub Star](https://github.com/n1ckzhao/mark-library) to the project.
+- Tweet about the mark-library.
+- Write interesting articles about the project on [Dev.to](https://dev.to/), [Medium](https://medium.com/) or your personal blog.
+
+Together, we can make mark-library **better**!
+
+## Contributing
+
+First off, thanks for taking the time to contribute! Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly appreciated**.
+
+Please read [our contribution guidelines](docs/CONTRIBUTING.md), and thank you for being involved!
+
+## Authors & contributors
+
+The original setup of this repository is by [Nick Zhao](https://github.com/n1ckzhao).
+
+For a full list of all authors and contributors, see [the contributors page](https://github.com/n1ckzhao/mark-library/contributors).
+
+## Security
+
+mark-library follows good practices of security, but 100% security cannot be assured.
+mark-library is provided **"as is"** without any **warranty**. Use at your own risk.
+
+_For more information and to report security issues, please refer to our [security documentation](docs/SECURITY.md)._
+
+## License
+
+This project is licensed under the **MIT license**.
+
+See [LICENSE](LICENSE) for more information.
+
+## Acknowledgements
+
+- [caai](http://mit.caai.cn/)
