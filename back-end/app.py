@@ -138,6 +138,10 @@ api.add_resource(Marks, '/marks/<mark_genre>')
 api.add_resource(MarkList, '/marks')
 api.add_resource(Genres, '/genres')
 
+@app.route('/crash')
+def main():
+    raise Exception()
+
 # 启动flask服务器
 if __name__ == '__main__':
     app.run(debug=True)
