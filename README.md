@@ -51,18 +51,16 @@
 
 ## About
 
-> This is a creative competition entries for [caai](http://mit.caai.cn/).
+> This is a creative competition entry for [caai](http://mit.caai.cn/).
 
-Have a imagine! When you go out and your pc is not with. So you find a public computer, but you want access your saved marks and you do not want to login.
+Have a imagine! When you go out and your pc is not with. So you find a public computer, but you want to access your saved marks and you do not want to log in.
 
-This is a mark library can render your own marks list on browser.
+This is a mark library that can render your own marks list on the browser.
 
 <details>
 <summary>Screenshots</summary>
 <br>
 
-> **[?]**
-> Please provide your screenshots here.
 
 |                            Home Page                             |                            About Page                             |
 | :--------------------------------------------------------------: | :---------------------------------------------------------------: |
