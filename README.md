@@ -1,6 +1,6 @@
 # Mark-Library
 
-> this project is refactoring with python, fastapi, react, mysql.
+> This project is build with Fast API, PostgreSQL, React...
 
 ## About
 
@@ -10,30 +10,19 @@ Have a imagine! When you go out and your pc is not with. So you find a public co
 
 This is a mark library that can render your own marks list on the browser.
 
-<details>
-<summary>Screenshots</summary>
-<br>
-
-|                            Home Page                             |                            About Page                             |
-| :--------------------------------------------------------------: | :---------------------------------------------------------------: |
-| <img src="docs/images/index.png" title="Home Page" width="100%"> | <img src="docs/images/about.png" title="Login Page" width="100%"> |
-
-</details>
+This is the version 3.0.0, the last version is a work for my graduation
 
 ### Built With
 
 - [React](https://github.com/facebook/react)
-- [Flask](https://github.com/pallets/flask)
-- [Axios](https://github.com/axios/axios)
-- [MySQL](https://github.com/mysqljs/mysql)
-- [NES.CSS](https://github.com/nostalgic-css/NES.css)
-- [Bootstrap](https://github.com/twbs/bootstrap)
+- [Fast API](https://github.com/tiangolo/fastapi)
+- [TailwindCSS](https://github.com/tailwindlabs/tailwindcss)
 
 ## Getting Started
 
 ### Prerequisites
 
-Make sure you have installed `node.js`, `python 3.7` and `pipenv`.
+Make sure you have installed `node.js`, `python 3.8` and `pipenv`.
 
 ### Installation
 
@@ -58,10 +47,12 @@ pipenv install
 pipenv run app.py
 ```
 
-> Dont forget ckeck the database properties and make sure it is correct in file `app.py`. 2. Run command in folder front-end:
+> 1. Dont forget ckeck the database properties and make sure it is correct in file `database.py`.
+> 2. Run command in folder front-end:
 
 ```sh
 npm start
+# if want to modify style, run `npm run dev` for launch tailwindcss engine.
 ```
 
 ## Acknowledgements

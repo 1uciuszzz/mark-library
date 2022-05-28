@@ -1,48 +1,56 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import {
+  FaHeartbeat,
+  FaArrowAltCircleUp,
+  FaUser,
+  FaFolder,
+  FaCompass,
+} from "react-icons/fa";
 
-const NavBar = () => {
+import brand from "../static/android-chrome-512x512.png";
+import UserName from "./UserName";
+import markaContext from "../contexts/markaContext";
+
+const Navbar = () => {
+  const { status } = useContext(markaContext);
   return (
-    <div className="container-fluid">
-      <div className="container">
-        <nav
-          className="navbar navbar-expand-lg navbar-light bg-light border border-dark border-5"
-          id="navbar"
-        >
-          <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
-              Mark Library
-            </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav">
-                <li className="nav-item myLink">
-                  <NavLink className="nav-link nes-btn is-primary" to="/marks">
-                    主页
-                  </NavLink>
-                </li>
-                <li className="nav-item myLink">
-                  <NavLink className="nav-link nes-btn is-warning" to="/about">
-                    关于
-                  </NavLink>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+    <div className="container mx-auto">
+      <nav className="navbar justify-between mb-12 shadow-md">
+        <Link className="" to="/">
+          <img src={brand} alt="brand" className="h-10 mr-4" />
+          MARKA
+        </Link>
+        <UserName />
+        {!status && (
+          <Link className="btn btn-secondary" to="/signup">
+            <FaArrowAltCircleUp className="mr-2" />
+            SIGN UP
+          </Link>
+        )}
+        {status && (
+          <Link className="btn btn-secondary" to="/profile">
+            <FaUser className="mr-2" />
+            PROFILE
+          </Link>
+        )}
+        {status && (
+          <Link className="btn btn-secondary" to="/dashboard">
+            <FaFolder className="mr-2" />
+            DASHBOARD
+          </Link>
+        )}
+        <Link className="btn btn-secondary" to="/u">
+          <FaCompass className="mr-2" />
+          EXPLORE
+        </Link>
+        <Link className="btn btn-secondary" to="/about">
+          <FaHeartbeat className="mr-2" />
+          ABOUT
+        </Link>
+      </nav>
     </div>
   );
 };
 
-export default NavBar;
+export default Navbar;
