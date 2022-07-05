@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import { http } from "../util/http";
 
 const useAxios = (options, onSuccess, onError) => {
   const [data, setData] = useState(null);
@@ -7,7 +7,7 @@ const useAxios = (options, onSuccess, onError) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios(options)
+    http(options)
       .then((response) => {
         setLoading(false);
         const { data } = response;

@@ -8,6 +8,7 @@ import ContentSection from "../components/ContentSection";
 import Directories from "../components/Directories";
 import AddDirectory from "../components/AddDirectory";
 import Pagination from "../components/Pagination";
+import { api } from "../util/http";
 
 const DashBoard = () => {
   const { dispatch, currentDirectoryPage, directories } =
@@ -15,7 +16,7 @@ const DashBoard = () => {
   const { loading } = useAxios(
     {
       method: "get",
-      url: "http://localhost:8000/client/d/",
+      url: api.getDirectory,
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     },
     (data) => {

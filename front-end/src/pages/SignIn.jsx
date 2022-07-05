@@ -1,11 +1,12 @@
 import { useState, useContext } from "react";
 
-import sideSvgSrc from "../static/undraw_sign_in_re_o58h.svg";
+import sideSvgSrc from "../assets/undraw_sign_in_re_o58h.svg";
 import markaContext from "../contexts/markaContext";
 import axios from "axios";
 import Loader from "../components/Loader";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { signIn } from "../util/api";
 
 const SignIn = () => {
   const { dispatch } = useContext(markaContext);
@@ -25,8 +26,7 @@ const SignIn = () => {
     const formData = new URLSearchParams();
     formData.append("username", inputs.email);
     formData.append("password", inputs.password);
-    axios
-      .post("http://localhost:8000/client/auth/signin", formData)
+    signIn(formData)
       .then((response) => {
         console.log(response);
         const { data } = response;

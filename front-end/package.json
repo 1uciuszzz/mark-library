@@ -2,11 +2,11 @@
   "name": "frontend",
   "version": "3.0.0",
   "description": "",
-  "source": "src/index.html",
+  "source": "public/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build",
-    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "build": "parcel build --public-url ./",
+    "tailwindcss": "npx tailwindcss -i ./src/tailwind.css -o ./src/App.css --watch"
   },
   "keywords": [],
   "author": "1uciuszzz",
@@ -23,7 +23,6 @@
     "@uiball/loaders": "^1.2.4",
     "axios": "^0.27.0",
     "daisyui": "^2.14.2",
-    "prop-types": "^15.8.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.3.1",

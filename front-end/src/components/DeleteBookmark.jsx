@@ -1,21 +1,16 @@
-import axios from "axios";
 import { useContext, useState } from "react";
 import { toast } from "react-toastify";
 
 import markaContext from "../contexts/markaContext";
 import Loader from "./Loader";
+import { deleteBookmark } from "../util/api";
 
 const DeleteBookmark = ({ b_id }) => {
   const { currentDirectory, dispatch } = useContext(markaContext);
   const [deleteBookmarkLoading, setDeleteBookmarkLoading] = useState(false);
   const handleDeleteBookmark = () => {
     setDeleteBookmarkLoading(true);
-    axios
-      .delete(`http://localhost:8000/client/b/${currentDirectory.id}/${b_id}`, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      })
+    deleteBookmark(currentDirectory.id, b_id)
       .then((response) => {
         setDeleteBookmarkLoading(false);
         dispatch({

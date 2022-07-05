@@ -4,6 +4,7 @@ import useAxios from "./../hooks/useAxios";
 import Loader from "../components/Loader";
 
 import UserInfo from "../components/UserInfo";
+import { api } from "../util/http";
 
 const User = () => {
   const [user, setUser] = useState({});
@@ -11,7 +12,7 @@ const User = () => {
   const { loading } = useAxios(
     {
       method: "get",
-      url: `http://localhost:8000/client/u/${uid}`,
+      url: `${api.getUserInfo}/${uid}`,
     },
     (data) => {
       setUser(data);

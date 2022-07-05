@@ -1,10 +1,10 @@
-import axios from "axios";
 import { useContext, useState } from "react";
 import { toast } from "react-toastify";
 import { FaPenSquare } from "react-icons/fa";
 
 import markaContext from "../contexts/markaContext";
 import Loader from "./Loader";
+import { editDirectory } from "../util/api";
 
 const EditDirectory = () => {
   const { dispatch, currentDirectory } = useContext(markaContext);
@@ -19,19 +19,10 @@ const EditDirectory = () => {
   };
   const handleEditDirectory = () => {
     setEditDirectoryLoading(true);
-    axios
-      .put(
-        `http://localhost:8000/client/d/${currentDirectory.id}`,
-        {
-          name: editDirectoryInputs.name,
-          description: editDirectoryInputs.description,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
-      )
+    editDirectory(currentDirectory.id, {
+      name: editDirectoryInputs.name,
+      description: editDirectoryInputs.description,
+    })
       .then((response) => {
         setEditDirectoryLoading(false);
         const { data } = response;

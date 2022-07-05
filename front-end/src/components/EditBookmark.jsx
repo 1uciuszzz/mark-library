@@ -1,9 +1,9 @@
-import axios from "axios";
 import { useState, useContext } from "react";
 import { toast } from "react-toastify";
 
 import markaContext from "../contexts/markaContext";
 import Loader from "./Loader";
+import { editBookmark } from "../util/api";
 
 const EditBookmark = ({ bookmark }) => {
   const [editBookmarkLoading, setEditBookmarkLoading] = useState(false);
@@ -19,21 +19,12 @@ const EditBookmark = ({ bookmark }) => {
   };
   const handleEditBookmark = () => {
     setEditBookmarkLoading(true);
-    axios
-      .put(
-        `http://localhost:8000/client/b/${bookmark.id}`,
-        {
-          name: editBookmarkInputs.name,
-          url: editBookmarkInputs.url,
-          description: editBookmarkInputs.description,
-          dir_id: currentDirectory.id,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
-      )
+    editBookmark(bookmark.id, {
+      name: editBookmarkInputs.name,
+      url: editBookmarkInputs.url,
+      description: editBookmarkInputs.description,
+      dir_id: currentDirectory.id,
+    })
       .then((response) => {
         setEditBookmarkLoading(false);
         const { data } = response;

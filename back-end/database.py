@@ -6,9 +6,9 @@ DB = f"postgresql"
 DB_API = f"psycopg2"
 HOST = f"127.0.0.1"
 PORT = f"5432"
-USER = f"<fill here please>"
-PASSWORD = f"<fill here please>"
-DB_NAME = f"<fill here please>"
+USER = f"<fill this field>"
+PASSWORD = f"<fill this field>"
+DB_NAME = f"<fill this field>"
 DB_URL = f"{DB}+{DB_API}://{USER}:{PASSWORD}@{HOST}:{PORT}/{DB_NAME}"
 
 

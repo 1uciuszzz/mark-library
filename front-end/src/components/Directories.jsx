@@ -1,10 +1,10 @@
-import axios from "axios";
 import { useContext } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 import markaContext from "../contexts/markaContext";
 import DeleteDirectory from "./DeleteDirectory";
+import { getBookmarksByDirectory } from "../util/api";
 
 const Directories = () => {
   const { directories, dispatch, currentDirectoryPage } =
@@ -14,12 +14,7 @@ const Directories = () => {
       type: "SET_CURRENT_DIRECTORY",
       directory,
     });
-    axios
-      .get(`http://localhost:8000/client/d/${directory.id}`, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      })
+    getBookmarksByDirectory(directory.id)
       .then((response) => {
         const { data } = response;
         dispatch({

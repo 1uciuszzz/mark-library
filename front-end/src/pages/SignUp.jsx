@@ -3,8 +3,9 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
-import sideSvgSrc from "../static/undraw_welcome_cats_thqn.svg";
+import sideSvgSrc from "../assets/undraw_welcome_cats_thqn.svg";
 import Loader from "../components/Loader";
+import { signUp } from "../util/api";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -66,8 +67,7 @@ const SignUp = () => {
       password: inputs.password,
     };
     setLoading(true);
-    axios
-      .post("http://localhost:8000/client/u/signup", user)
+    signUp(user)
       .then((response) => {
         setLoading(false);
         const { data } = response;

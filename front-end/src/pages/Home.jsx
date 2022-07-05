@@ -4,11 +4,12 @@ import Loader from "../components/Loader";
 import useAxios from "../hooks/useAxios";
 import markaContext from "../contexts/markaContext";
 import Collapse from "../components/Collapse";
+import { api } from "../util/http";
 const Home = () => {
   const { dispatch, publicDirectories } = useContext(markaContext);
   const { loading } = useAxios(
     {
-      url: "http://localhost:8000/public/d/",
+      url: api.getPublicDirectory,
       method: "get",
     },
     (data) => {

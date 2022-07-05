@@ -1,11 +1,11 @@
-import axios from "axios";
 import { useState, useContext } from "react";
 import { toast } from "react-toastify";
 import { FaFolderPlus } from "react-icons/fa";
 
-import createSvg from "../static/undraw_create_re_57a3.svg";
+import createSvg from "../assets/undraw_create_re_57a3.svg";
 import markaContext from "../contexts/markaContext";
 import Loader from "./Loader";
+import { addDirectory } from "../util/api";
 
 const AddDirectory = () => {
   const { dispatch } = useContext(markaContext);
@@ -28,17 +28,10 @@ const AddDirectory = () => {
       setCreateDirLoading(false);
       return;
     }
-    axios
-      .post(
-        "http://localhost:8000/client/d/",
-        {
-          name,
-          description,
-        },
-        {
-          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-        }
-      )
+    addDirectory({
+      name,
+      description,
+    })
       .then((response) => {
         setCreateDirLoading(false);
         const { data } = response;

@@ -8,7 +8,7 @@ import {
   FaCompass,
 } from "react-icons/fa";
 
-import brand from "../static/android-chrome-512x512.png";
+import brand from "../assets/android-chrome-512x512.png";
 import UserName from "./UserName";
 import markaContext from "../contexts/markaContext";
 

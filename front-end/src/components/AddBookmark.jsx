@@ -1,10 +1,10 @@
-import axios from "axios";
 import { useState, useContext } from "react";
 import { toast } from "react-toastify";
 import { FaPlusCircle } from "react-icons/fa";
 
 import Loader from "./Loader";
 import markaContext from "../contexts/markaContext";
+import { addBookmark } from "../util/api";
 
 const AddBookmark = () => {
   const { currentDirectory, dispatch } = useContext(markaContext);
@@ -20,21 +20,12 @@ const AddBookmark = () => {
   };
   const handleAddBookmark = () => {
     setAddBookmarkLoading(true);
-    axios
-      .post(
-        "http://localhost:8000/client/b/",
-        {
-          name: addBookmarkInputs.name,
-          url: addBookmarkInputs.url,
-          description: addBookmarkInputs.description,
-          dir_id: currentDirectory.id,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
-      )
+    addBookmark({
+      name: addBookmarkInputs.name,
+      url: addBookmarkInputs.url,
+      description: addBookmarkInputs.description,
+      dir_id: currentDirectory.id,
+    })
       .then((response) => {
         setAddBookmarkLoading(false);
         const { data } = response;

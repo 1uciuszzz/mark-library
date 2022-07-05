@@ -8,7 +8,7 @@ import {
 
 const About = () => {
   return (
-    <div className="card bg-primary rounded-md text-secondary-content p-2">
+    <div className="card rounded-md p-2">
       <div className="card-body">
         <h3 className="card-title text-2xl font-bold">About</h3>
         <article className="flex flex-col gap-2">

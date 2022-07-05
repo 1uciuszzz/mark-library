@@ -1,22 +1,17 @@
-import axios from "axios";
 import { useContext, useState } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 
 import Loader from "./Loader";
 import markaContext from "../contexts/markaContext";
 import { toast } from "react-toastify";
+import { deleteDirectory } from "../util/api";
 
 const DeleteDirectory = ({ directory }) => {
   const [deleteDirectoryLoading, setDeleteDirectoryLoading] = useState(false);
   const { dispatch, directories } = useContext(markaContext);
   const handleDeleteDirectory = () => {
     setDeleteDirectoryLoading(true);
-    axios
-      .delete(`http://localhost:8000/client/d/${directory.id}`, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      })
+    deleteDirectory(directory.id)
       .then((response) => {
         setDeleteDirectoryLoading(false);
         dispatch({

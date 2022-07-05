@@ -10,10 +10,11 @@ import { toast } from "react-toastify";
 
 import Loader from "../components/Loader";
 import markaContext from "../contexts/markaContext";
+
 const Profile = () => {
   const { user } = useContext(markaContext);
   return (
-    <div className="card bg-info text-info-content shadow-md">
+    <div className="card shadow-md">
       <div className="card-body">
         {
           <>
@@ -36,19 +37,23 @@ const Profile = () => {
             </h2>
             <p className="flex items-center">
               <FaTired className="mr-2" />
-              Name: {user.name}
+              <span className="badge">Name</span>
+              <span className="ml-2 font-mono">{user.name}</span>
             </p>
             <p className="flex items-center">
               <FaPaperPlane className="mr-2" />
-              Email:{user.email}
+              <span className="badge">Email</span>
+              <span className="ml-2 font-mono">{user.email}</span>
             </p>
             <p className="flex items-center">
               <FaLaughSquint className="mr-2" />
-              Role:{user.role}
+              <span className="badge">Role</span>
+              <span className="ml-2 font-mono">{user.role}</span>
             </p>
             <p className="flex items-center">
               <FaCalendarDay className="mr-2" />
-              Join Date:{user.join_date}
+              <span className="badge">Join Date</span>
+              <span className="ml-2 font-mono">{user.join_date}</span>
             </p>
           </>
         }

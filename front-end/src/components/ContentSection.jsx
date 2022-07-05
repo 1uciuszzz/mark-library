@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
-import defaultBanner from "../static/undraw_wishlist_re_m7tv.svg";
-import bookmarkListBanner from "../static/undraw_bookmarks_re_mq1u.svg";
+import defaultBanner from "../assets/undraw_wishlist_re_m7tv.svg";
+import bookmarkListBanner from "../assets/undraw_bookmarks_re_mq1u.svg";
 import markaContext from "../contexts/markaContext";
 import Bookmarks from "./Bookmarks";
 import AddBookmark from "./AddBookmark";
@@ -14,7 +14,7 @@ const ContentSection = () => {
       <img src={defaultBanner} alt="default banner" />
     </figure>
   ) : (
-    <div className="card shadow-md bg-cyan-600 w-8/12">
+    <div className="card shadow-md w-8/12">
       <div className="card-body">
         <div className="card card-side">
           <figure className="w-6/12">

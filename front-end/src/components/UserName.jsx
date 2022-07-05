@@ -6,6 +6,7 @@ import markaContext from "../contexts/markaContext";
 import Loader from "./Loader";
 import useAxios from "./../hooks/useAxios";
 import { toast } from "react-toastify";
+import { api } from "../util/http";
 
 const UserName = () => {
   const { status, dispatch, user } = useContext(markaContext);
@@ -23,7 +24,7 @@ const UserName = () => {
   const { loading } = useAxios(
     {
       method: "get",
-      url: "http://localhost:8000/client/auth/token",
+      url: api.getUserByToken,
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     },
     (data) => {

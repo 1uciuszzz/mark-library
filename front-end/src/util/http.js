@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const http = axios.create({
-  baseURL: `http://localhost:8000`,
+  baseURL: `http://1ucius.top:8000`,
+  timeout: 6000,
 });
 
 const api = {
